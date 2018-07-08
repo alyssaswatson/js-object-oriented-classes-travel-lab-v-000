@@ -3,8 +3,10 @@ class Driver {
     this.name = name;
     this.startDate = new Date(startDate)
   }
- 
-  sayHello() {
-    console.log(`Hello, my name is ${this.name}`);
+
+  yearsExperienceFromBeginningOf(year){
+    let endDate = new Date(year, 1, 1)
+    let totalYears = (endDate - this.startDate)/(365*24*60*60*1000)
+    return parseInt(totalYears)
   }
 }
